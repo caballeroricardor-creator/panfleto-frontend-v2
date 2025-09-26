@@ -1,0 +1,26 @@
+/* frontend/src/index.css - Layout Global */
+
+/* Variables globales */
+:root {
+  --panfleto-black: #171717ff;
+  --text-light: #f7fafc;
+}
+
+/* Base de la aplicación y colores */
+html, body, #root {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Necesario para el Sticky Footer */
+}
+
+body {
+    background-color: var(--panfleto-black);
+    color: var(--text-light); /* Esto es si quieres que el texto fuera de contenedores sea claro */
+}
+
+/* El elemento main debe crecer para empujar el Footer hacia abajo */
+main {
+    flex-grow: 1; 
+}

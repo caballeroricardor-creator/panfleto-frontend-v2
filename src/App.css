@@ -1,0 +1,17 @@
+/* frontend/src/App.css - Variables y Utilidades */
+
+:root {
+  --panfleto-yellow: #F1CD3A;
+  --panfleto-black: #171717ff;
+  --text-light: #f7fafc;
+  --text-dark: #36383a;
+}
+
+/* CSS para corregir el Header fijo en todas las páginas internas */
+/* Este padding es la altura del header + margen extra */
+.content-top-spacing {
+    padding-top: 4.5rem; 
+    min-height: calc(100vh - 40px); /* Asegura que el contenido ocupe casi toda la ventana */
+}
+
+/* Puedes dejar aquí otros estilos genéricos que NO sean de componentes ni de layout. */

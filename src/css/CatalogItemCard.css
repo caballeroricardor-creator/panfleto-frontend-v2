@@ -1,0 +1,58 @@
+/* src/css/CatalogItemCard.css - Estilo de Tarjeta para el Catálogo */
+
+/* 1. Estilos Base de la Tarjeta */
+.catalog-item-card {
+    border: none !important;
+    border-radius: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center; 
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+
+/* 🔑 Efecto Hover: la tarjeta se levanta y la sombra se acentúa */
+.catalog-item-card:hover {
+    transform: translateY(-7px); 
+    box-shadow: 0 11px 23px rgba(0, 0, 0, 0.3); 
+}
+
+
+/* 🔑 CLAVE: El Marco de Póster que rodea la imagen (como en tu referencia) */
+.catalog-poster-frame {
+    /* Fondo blanco que simula el borde */
+    border: 3px solid #FFFFFF; 
+    border-radius: 0; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+/* Imagen y su Contenedor */
+.catalog-item-card .catalog-card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+/* 🔑 Estilos para el Card.Body (Espaciado) */
+.catalog-card-body {
+    padding: 1rem 0.5rem; 
+}
+
+/* 🔑 Color y Estilo del Nombre VISIBLE */
+.catalog-card-title {
+    font-weight: bold;
+    color: #171717 !important; /* Color negro Panfleto */
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+    text-decoration: none !important;
+}
+
+/* 🔑 Color y Estilo del Precio VISIBLE */
+.catalog-card-price { 
+    font-size: 1.7rem; /* Tamaño destacado */
+    font-weight: 700;
+    color: #F1CD3A !important; /* Amarillo Panfleto */
+    margin-top: 0.5rem;
+}

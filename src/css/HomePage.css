@@ -1,0 +1,88 @@
+/* src/css/HomePage.css - Version Final con Espaciado Fijo */
+
+/* Estilos para el banner principal */
+.hero-banner-container {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  margin-top: -80px; 
+  z-index: -1; 
+}
+
+/* Estilos para el contenido (logo y eslogan) */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Tamaño del logo */
+.hero-logo {
+  width: 300px; 
+  height: auto;
+  margin-bottom: 0px;
+}
+
+/* EFECTO DE HOVER EN EL LOGO */
+.logo-hover-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-hover-effect:hover {
+    transform: scale(1.05);
+}
+
+/* 🔑 CLAVE: Aumentamos el margen superior de forma forzada */
+.slogan {
+  /* Los estilos de fuente son controlados por HomePage.js */
+  font-size: 1.7rem; 
+  font-weight: bold;
+  margin-top: 40px !important; /* <-- FUERZA EL MARGEN SUPERIOR */
+}
+
+/* CLAVE RESPONSIVA: MEDIA QUERY para pantallas pequeñas */
+@media (max-width: 992px) {
+    /* En tabletas y móviles, permitimos que el eslogan salte de línea */
+    .slogan {
+        white-space: normal !important; 
+        font-size: 2.2rem !important; 
+        line-height: 1.2;
+    }
+    .hero-logo {
+        width: 250px; 
+    }
+}
+
+
+/* Estilos para la sección 'Acerca de Nosotros' */
+.about-us-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  color: #171717ff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 3rem; 
+}
+
+.about-us-text {
+  color: #171717ff;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.5rem; 
+  line-height: 1.5;
+}

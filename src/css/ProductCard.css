@@ -1,0 +1,99 @@
+/* frontend/src/css/ProductCard.css - Versión FINAL: Borde de Póster + Overlay */
+
+/* 1. Estilos Base de la Tarjeta */
+.product-card {
+    position: relative;
+    overflow: visible; /* Cambiado a visible para que la sombra se vea */
+    
+    border: none !important; 
+    border-radius: 0;
+    
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    cursor: pointer;
+    background-color: transparent !important;
+    padding: 0 !important;
+    text-align: center;
+}
+
+/* 🔑 CLAVE: El Marco de Póster Blanco (3px de grosor) */
+.product-poster-frame {
+    border: 3px solid #FFFFFF; 
+    border-radius: 0; 
+    overflow: hidden; /* Ocultamos el desborde para que el zoom sea limpio */
+    background-color: #FFFFFF; 
+}
+
+/* Contenedor de la Imagen para el Overlay */
+.image-overlay-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 0;
+}
+
+/* La Imagen y su Transición (Zoom) */
+.product-card .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease-out; 
+    border-radius: 0;
+}
+
+/* El Overlay (Capa Oscura con el Título) */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    opacity: 0;
+    transition: opacity 0.2s ease-out; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; 
+    border-radius: 0;
+}
+
+/* Estilo del Título dentro del Overlay */
+.product-title-overlay {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    
+    transform: translateY(10px); 
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out; 
+    opacity: 0;
+}
+
+/* 🔑 ELIMINACIÓN DE ESTILOS DE TEXTO VISIBLE */
+/* Todos los estilos de .product-card-body, .product-card-title, .product-card-price deben eliminarse */
+
+/* 5. EFECTOS AL HACER HOVER sobre la Tarjeta */
+
+.product-card-hover-effect:hover {
+    transform: translateY(-7px); 
+    box-shadow: 0 11px 23px rgba(0, 0, 0, 0.3); 
+}
+
+.product-card-hover-effect:hover .card-image {
+    transform: scale(1.05); 
+}
+
+.product-card-hover-effect:hover .product-overlay {
+    opacity: 1; 
+}
+
+.product-card-hover-effect:hover .product-title-overlay {
+    transform: translateY(0); 
+    opacity: 1;
+}
+
+/* 🔑 LIMPIEZA FINAL: Aseguramos que no haya margen extra por el espacio eliminado */
+.product-card .card-img-top {
+    margin-bottom: 0 !important;
+}

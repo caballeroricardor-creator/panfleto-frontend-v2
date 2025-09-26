@@ -1,0 +1,8 @@
+/* frontend/src/css/LayoutPage.css */
+
+/* Define un margen superior grande. 5rem = 80px, lo cual debe ser suficiente. */
+/* Usamos margin-top para empujar el contenido hacia abajo, sin que Bootstrap lo anule. */
+.page-margin-top {
+    margin-top: 5rem !important; 
+    /* El !important asegura que este margin anule cualquier margin o padding de Bootstrap. */
+}
