@@ -1,5 +1,10 @@
 # frontend/public/_redirects
 
+# 1. Regla específica para el login (API de Render)
 /api/users/login https://panfleto-backend-v2.onrender.com/api/users/login 200
 
+# 2. Regla genérica para el resto de la API (Render)
 /api/* https://panfleto-backend-v2.onrender.com/api/:splat 200
+
+# 3. Regla de FALLBACK (Necesaria para React en Netlify)
+/* /index.html 200
