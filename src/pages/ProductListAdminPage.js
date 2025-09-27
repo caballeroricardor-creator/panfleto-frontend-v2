@@ -28,7 +28,7 @@ const ProductListAdminPage = () => {
                 return;
             }
             
-            const { data } = await api.get('/api/products/admin');
+            const { data } = await api.get('/products/admin');
             
             setProducts(data);
             setLoading(false);
@@ -45,7 +45,7 @@ const ProductListAdminPage = () => {
     const deleteHandler = async (id) => {
         if (window.confirm('¿Estás seguro de que quieres eliminar este producto?')) {
             try {
-                await api.delete(`/api/products/${id}`);
+                await api.delete(`/products/${id}`);
                 fetchProducts();
             } catch (err) {
                 console.error(err);

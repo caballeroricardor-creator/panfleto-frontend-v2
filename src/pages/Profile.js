@@ -100,7 +100,7 @@ const ProfilePage = () => {
         const fetchOrders = async () => {
             try {
                 setOrdersLoading(true);
-                const { data } = await api.get('/api/orders/myorders');
+                const { data } = await api.get('/orders/myorders');
                 
                 setOrders(data);
                 setOrdersLoading(false);

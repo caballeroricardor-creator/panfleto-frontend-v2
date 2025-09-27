@@ -26,7 +26,7 @@ const UserListAdminPage = () => {
                 return;
             }
             
-            const { data } = await api.get('/api/users/admin');
+            const { data } = await api.get('/users/admin');
             
             setUsers(data);
             setLoading(false);
@@ -49,7 +49,7 @@ const UserListAdminPage = () => {
                     return;
                 }
                 
-                await api.delete(`/api/users/${id}`);
+                await api.delete(`/users/${id}`);
                 
                 fetchUsers(); // Recarga la lista de usuarios
             } catch (err) {

@@ -82,7 +82,7 @@ const PaymentForm = () => { // <-- Definición de PaymentForm
                 // Asegurar que solo se haga si hay items en el carrito y un precio total positivo
                 if (totalPrice > 0) {
                     // La API espera centavos, por eso multiplicamos por 100
-                    const { data } = await axios.post('/api/payment/create-payment-intent', { amount: Math.round(totalPrice * 100) }); 
+                    const { data } = await axios.post('/payment/create-payment-intent', { amount: Math.round(totalPrice * 100) }); 
                     setClientSecret(data.clientSecret); 
                 }
             } catch (error) { 
@@ -120,7 +120,7 @@ const PaymentForm = () => { // <-- Definición de PaymentForm
                     }, 
                 }; 
                 
-                const { data } = await axios.post('/api/orders', { 
+                const { data } = await axios.post('/orders', { 
                     orderItems: cartItems.map(item => ({ 
                         name: item.name, 
                         qty: item.qty, 

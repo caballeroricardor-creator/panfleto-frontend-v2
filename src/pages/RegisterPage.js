@@ -37,7 +37,7 @@ const RegisterPage = () => {
         }
 
         try {
-            await api.post('/api/users/register', { name, email, password });
+            await api.post('/users/register', { name, email, password });
             
             await login(email, password); 
             navigate('/');

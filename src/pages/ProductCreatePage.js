@@ -38,7 +38,7 @@ const ProductCreatePage = () => {
             };
 
             // Ahora usamos 'api.post' sin pasar el objeto de configuración del token
-            await api.post('/api/products', newProduct);
+            await api.post('/products', newProduct);
             
             alert('¡Producto creado exitosamente!');
             navigate('/admin/products'); // Redirige a la lista de productos

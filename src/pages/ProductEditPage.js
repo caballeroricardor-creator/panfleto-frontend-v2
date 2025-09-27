@@ -31,7 +31,7 @@ const ProductEditPage = () => {
                 
                 
                 // Ahora usamos 'api.get' y el interceptor se encarga del token
-                const { data } = await api.get(`/api/products/${id}`);
+                const { data } = await api.get(`/products/${id}`);
                 
                 setName(data.name);
                 setPrice(data.price);
@@ -65,7 +65,7 @@ const ProductEditPage = () => {
             };
 
             // Ahora usamos 'api.put'
-            await api.put(`/api/products/${id}`, updatedProduct);
+            await api.put(`/products/${id}`, updatedProduct);
             
             alert('¡Producto actualizado exitosamente!');
             navigate('/admin/products');
