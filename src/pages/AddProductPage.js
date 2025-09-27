@@ -23,7 +23,7 @@ const AddProductPage = () => {
         },
       };
 
-      const { data } = await axios.post('/products', product, config);
+      const { data } = await axios.post('/api/products', product, config);
       console.log('Product created:', data);
     } catch (error) {
       console.error('Error creating product:', error);
