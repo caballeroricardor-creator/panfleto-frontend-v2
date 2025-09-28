@@ -223,7 +223,6 @@ const ProfilePage = () => {
                                                 <div key={index} className="m-2 text-center" style={{ width: '100px' }}>
                                                     <Image src={item.image} alt={item.name} fluid rounded />
                                                     <small className="d-block" style={{color: COLORS.panfletoBlack}}>{item.name}</small>
-                                                    <small className="d-block" style={{color: COLORS.panfletoBlack}}>{item.qty} x {formatCurrency(item.price)}</small>
                                                 </div>
                                             ))}
                                         </div>
