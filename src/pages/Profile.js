@@ -216,7 +216,7 @@ const ProfilePage = () => {
                                 <tr key={order._id}>
                                     <td className="align-middle">{order._id}</td>
                                     <td className="align-middle">{order.createdAt.substring(0, 10)}</td>
-                                    <td className="align-middle">{formatCurrency(order.totalPrice)}</td>
+                                    <td className="align-middle">{formatCurrency(order.totalPrice / 100)}</td>
                                     <td>
                                         <div className="d-flex flex-wrap justify-content-center">
                                             {order.orderItems.map((item, index) => (
